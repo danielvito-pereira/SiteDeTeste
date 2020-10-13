@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+body {
+    margin: 0;
+}
+.navbar {
+    background: #be5555;
+    color: #222222;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-between;/*coloca os itens um do lado do outro*/
+    align-items: center;
+    padding: 20px;
+}
+.check {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    outline: none;
+}
+.check::before {
+    content: url(fechado.sgv);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+}
+.check::checked::before {
+    content: url(aberto.sgv);
+}
+ul {
+   --display: flex;
+   display: var(--display);
+   flex: 1;
+   justify-content: space-evenly; 
+}
+
+ul li {
+    list-style: none; /*retira a bolinha dele*/
+}
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;/*quebra linha*/
+    }
+    .check {
+        display: block;
+    }
+    ul {
+        flex-direction: column;
+        padding-left: 0;
+        flex-basis: 100%;/*diz qual o tamanho que o item vai ter na linha*/
+        --display:none;
+    }
+    ul li {
+        padding: 5px 0;
+    }
+    .check::checked + ul {
+        --display:flex;
+    }
+}
+div#menu {
+    text-decoration: none;
+    
+}
+a {
+    text-decoration: none;
+
+}
