@@ -3,8 +3,8 @@ body {
     margin: 0;
 }
 .navbar {
-    background: #be5555;
-    color: #222222;
+    background: #b8a9a9;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: space-between;/*coloca os itens um do lado do outro*/
@@ -19,7 +19,7 @@ body {
     outline: none;
 }
 .check::before {
-    content: url(fechado.sgv);
+    content: url(../img/hamburger-menu.svg);
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ body {
 
 }
 .check::checked::before {
-    content: url(aberto.sgv);
+    content: url(../img/hamburger.svg);
 }
 ul {
    --display: flex;
